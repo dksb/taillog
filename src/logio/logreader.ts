@@ -79,6 +79,9 @@ export class LogReader {
       if (diff <= 0) {
         //no change or deleted
         lastSize = stats!.size;
+        if (diff <0) {
+          logger.error("Lines deleted from log causing incosistent state");
+        }
         return;
       }
       // Read file changes
