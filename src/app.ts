@@ -14,7 +14,6 @@ import socketio from '@feathersjs/socketio';
 import { Application } from './declarations';
 import logger from './logger';
 import services from './services';
-import appHooks from './app.hooks';
 import channels from './channels';
 // Don't remove this comment. It's needed to format import lines nicely.
 
@@ -46,8 +45,5 @@ app.configure(channels);
 // Configure a middleware for 404s and the error handler
 app.use(express.notFound());
 app.use(express.errorHandler({ logger } as any));
-
-app.hooks(appHooks);
-
 
 export default app;
