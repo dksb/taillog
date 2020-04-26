@@ -1,4 +1,4 @@
-# logmonitoring
+# TailLog
 
 > 
 
@@ -38,7 +38,7 @@ Getting up and running is as easy as 1, 2, 3.
 2. Install your dependencies
 
     ```
-    cd path/to/logmonitoring
+    cd path/to/tailog
     npm install
     ```
 
@@ -47,7 +47,12 @@ Getting up and running is as easy as 1, 2, 3.
     ```
     npm start
     ```
-4. Log file location: '''lib/logs/log.txt'''. Please make sure you look at lib folder
+4. Open the url
+    ```
+    http://localhost:3030
+    ```
+
+5. Log file location: **lib/logs/log.txt**. Please make sure you look at lib folder
 and not at src folder. Since typescript compiles the code into lib, the web app
 reads from lib folder. Add new lines to log.txt manually (or linux commands) to see 
 it udpated in the client side automatically.
